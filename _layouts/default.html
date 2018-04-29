@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <div id="container" role="main" class="container">
+      {% include header.html %}
+      <main>
+        {{ content }}
+      </main>
+      {% include footer.html %}
+    </div>
+    {% if site.google_analytics and jekyll.environment == 'production' %}
+    {% include analytics.html %}
+    {% endif %}
+  </body>
+</html>

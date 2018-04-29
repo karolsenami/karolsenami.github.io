@@ -1,0 +1,30 @@
+
+//
+// VARIABLES
+//
+
+// Colors
+$bodyBackgroundColor: #333;
+$backgroundColor: #fff;
+$textColor: #333;
+$black: #1a1a1a;
+$blue : blue;
+$darkerGray: #222;
+$darkGray: #333;
+$gray: #666;
+$lightGray: #eee;
+$bottom-margin: 7%;
+$profile-horizontal-margin: 1%;
+$primaryColor: rgba(234,221,6,0.9);
+
+// Font stacks
+// $font-normal: Questrial, Helvetica, sans-serif;
+$font-normal: Arvo, "Helvetica Neue", Helvetica, sans-serif;
+$font-title: Arvo, "Helvetica Neue", Helvetica, Arial, sans-serif;
+// font-family: 'Playfair Display', serif;
+// Mobile breakpoints
+@mixin mobile {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}

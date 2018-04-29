@@ -1,0 +1,194 @@
+---
+---
+
+//
+// IMPORTS
+//
+
+@import "reset";
+@import "variables";
+// Syntax highlighting @import is at the bottom of this file
+
+/**************/
+/* BASE RULES */
+/**************/
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font: 16px/1.4 $font-normal;
+  @media screen and (max-width: 450px) {
+    font-size: 80%;
+  }
+  font-weight: lighter;
+  letter-spacing: 0.2em;
+  line-height: 1.7em;
+  color: $textColor;
+  background-color: $bodyBackgroundColor;
+}
+
+main {
+  max-width: 1300px;
+  margin: auto;
+  padding: $profile-horizontal-margin;
+  @include mobile {
+      padding: 2*$profile-horizontal-margin;
+  }
+}
+
+.container {
+  background: $backgroundColor;
+  margin: 1%;
+  padding: $profile-horizontal-margin;
+  width: 98%;
+  @include mobile {
+    margin: 3%;
+    width: 94%;
+    padding: 2*$profile-horizontal-margin;
+  }
+}
+
+.half-parent-size {
+  width: 50%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-title;
+  font-weight: 1000;
+  line-height: 1.7;
+  padding: 0;
+
+  @include mobile {
+    line-height: 1.4;
+  }
+}
+
+h1 {
+  font-size: 3.75em;
+  font-style: italic;
+  text-shadow: 1px 1px 0 $textColor , -1px -1px 0 $textColor , 1px -1px 0 $textColor , -1px 1px 0 $textColor ;
+  color: $backgroundColor;
+  text-overflow: clip;
+  a {
+    color: inherit;
+  }
+}
+
+
+h2 {
+  font-size: 3.125em;
+}
+
+h3 {
+  font-size: 2.5em;
+}
+
+h4 {
+  font-size: 1.875em;
+  color: $gray;
+}
+
+a {
+  color: $blue;
+  // text-shadow: 2px 2px $primaryColor;
+
+  text-decoration: none;
+	cursor: pointer;
+  &:hover, &:active {
+    color: $blue;
+  }
+}
+
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+}
+
+.outline-text {
+  text-shadow: 1px 1px 0 $textColor , -1px -1px 0 $textColor , 1px -1px 0 $textColor , -1px 1px 0 $textColor ;
+  color: $backgroundColor;
+  text-overflow: clip;
+}
+
+.outline-box {
+  box-shadow: 1px 1px 0 $textColor , -1px -1px 0 $textColor , 1px -1px 0 $textColor , -1px 1px 0 $textColor ;
+}
+
+// Fixes images in popup boxes from Google Translate
+.gmnoprint img {
+  max-width: none;
+}
+
+// Specify the color of the selection
+::-moz-selection {
+  color: $black;
+  background: $lightGray;
+}
+::selection {
+  color: $black;
+  background: $lightGray;
+}
+
+// Nicolas Gallagher's micro clearfix hack
+// http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+header {
+  margin-bottom: 3%;
+  .site-name {
+    text-shadow: 1px 1px 0 $textColor , -1px -1px 0 $textColor , 1px -1px 0 $textColor , -1px 1px 0 $textColor,-6px -3px 1px $primaryColor;
+  }
+}
+
+nav {
+  font-family: $font-normal;
+  font-size: 18px;
+  position: relative;
+  right: 0;
+
+  img {
+    width: 50px;
+  }
+  @include mobile {
+    display: block;
+    font-size: 16px;
+  }
+
+  a {
+    margin-left: 20px;
+    color: $darkGray;
+    text-align: right;
+    font-weight: 300;
+
+    @include mobile {
+      margin: 0 10px;
+      color: $blue;
+    }
+  }
+}
+
+.footer-description {
+  font-weight: bold;
+}
+
+// Settled on moving the import of syntax highlighting to the bottom of the CSS
+// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+@import "highlights";
+@import "svg-icons";

@@ -1,0 +1,152 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{ site.baseurl }}/css/index.css">
+  <section class="introduction">
+      <div class="profile-picture">
+        <img class="me-drawing" src="assets/images/me.svg" alt="a drawing of me">
+        <img class="arrow" src="assets/images/arrow.svg" alt="an arrow pointing the drawing of me">
+        <span class="picture-description normal-text">me*</span>
+        <span class="drawing-text">*I'm not actually a drawing</span>
+      </div>
+      <div class="profile-description">
+        I am a
+        <select class="select-iam">
+          <optgroup>
+            <option value="creative coder">creative coder</option>
+            <option value="creative technologist">creative technologist</option>
+            <option value="designer">designer</option>
+            <option value="swiss army knife">swiss army knife</option>
+          </optgroup>
+        </select>
+        <select class="select-iam width">
+               <option class="widthTempOption"></option>
+        </select>
+         in Paris</br>
+        I develop
+        <select class="select-develop">
+          <optgroup>
+            <option value="software">softwares</option>
+            <option value="video games">video games</option>
+            <option value="mobile apps">mobile apps</option>
+            <option value="websites">websites</option>
+          </optgroup>
+        </select>
+        <select class="select-develop width">
+               <option class="widthTempOption"></option>
+        </select>
+        </br>
+        I studied Interactive Design at Gobelins for
+        <select class="select-gobelins">
+          <optgroup>
+            <option value="3">3</option>
+            <option value="1+2">1+2</option>
+            <option value="2+1">2+1</option>
+          </optgroup>
+        </select>
+        <select class="select-gobelins width">
+               <option class="widthTempOption"></option>
+        </select>
+         years</br>
+        I like
+        <select class="select-projects">
+          <optgroup>
+            <option value="meaningful">meaningful</option>
+            <option value="useful">useful</option>
+            <option value="ergonomic">ergonomic</option>
+            <option value="challenging">challenging</option>
+            <option value="original">original</option>
+            <option value="beautiful">beautiful</option>
+        </optgroup>
+        </select>
+        <select class="select-projects width">
+               <option class="widthTempOption"></option>
+        </select>
+         projects</br>
+        This website is
+        <select class="select-website">
+          <optgroup>
+            <option value="a work in progress">a work in progress</option>
+            <option value="an example of my busyness">an example of my busyness</option>
+            <option value="2-days-developed 1-page website">a 2-days-developed 1-page website</option>
+            <option value="efficient and direct portfolio">an efficient and direct portfolio</option>
+        </optgroup>
+        </select></br></br>
+        <select class="select-website width">
+               <option class="widthTempOption"></option>
+        </select>
+        <span class="contract">I am currently looking for a</span>
+        <select class="select-contract contract">
+          <optgroup>
+            <option value="CDI or CDD">CDI or CDD contract</option>
+            <option value="good team">good & ambitious team</option>
+            <option value="productive studio">productive studio</option>
+            <option value="Paris-based studio">Paris-based studio</option>
+          </optgroup>
+        </select>.
+        <select class="select-contract width contract">
+               <option class="widthTempOption"></option>
+        </select>
+      </div>
+  </section>
+  <section class="posts">
+    <h1 class="posts-title"><span class="highlight-container"><span class="highlight-content">What I made :</span></span></h1>
+    {% for post in site.posts %}
+      <!-- <a href="{{ site.baseurl }}{{ post.url }}"> -->
+        <article class="post">
+          <div class="post-cover half-parent-size">
+
+            <div class="index outline-text"  style="background-color: rgb({{post.color.r}},{{post.color.g}},{{post.color.b}});">
+               {{ forloop.index }}/{{site.posts.size}}
+            </div>
+            <div class="post-cover-picture-container">
+              <img class="post-cover-picture" src="{{ site.baseurl }}{{ post.preview }}" alt="Cover image for {{post.title}}" style="box-shadow: 5px 5px rgba({{post.color.r}},{{post.color.g}},{{post.color.b}});">
+              <div class="post-cover-icons-container">
+                {% if post.vimeo-id %} <span class="post-cover-icon"><a class="video-icon" target="_blank" href="http://vimeo.com/{{post.vimeo-id}}" vimeo-id="{{post.vimeo-id}}" ><img src="assets/images/video-logo.png" alt=""></a></span>{%endif%}
+                {% if post.link %} <span class="post-cover-icon"><a class="video-icon" target="_blank" href="{{post.link}}"><img src="assets/images/link-logo.png" alt=""></a></span>{%endif%}
+              </div>
+            </div>
+            <div class="date outline-text" style="background-color: rgb({{post.color.r}},{{post.color.g}},{{post.color.b}});">
+              {{ post.year }}</div>
+
+          </div>
+
+          <div class="post-description half-parent-size">
+
+            <h2 class="title outline-text" style="background-color: rgb({{post.color.r}},{{post.color.g}},{{post.color.b}});">
+              {{ post.title }}
+            </h2>
+
+            <div class="entry">
+              {{ post.description }}
+            </div>
+
+            <div class="credits credit-{{forloop.index}}">
+              Credits :
+            {% for credit in post.credits %}
+              {% if credit.link %}<a href="{{credit.link}}" target="_blank"> {%endif%}
+              {{ credit.name }}<!--
+    -->{% if credit.link %}</a>{%endif%}{% if forloop.last == false %},{% endif %}
+            {% endfor %}
+            </div>
+
+            <style>
+              .credit-{{forloop.index}} a {
+                 color: rgb({{post.color.r}},{{post.color.g}},{{post.color.b}});
+              }
+            </style>
+
+          </div>
+
+
+
+        </article>
+      <!-- </a> -->
+    {% endfor %}
+  </section>
+  <!-- <div id="video-overlay-container">
+    <iframe id="video-overlay" src="https://player.vimeo.com/video/235007077?color=FFFFFF&title=0&byline=0&portrait=0" padding-bottom="0%" frameborder="0"></iframe>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script src="{{ site.baseurl }}/js/post-buttons-callbacks.js"></script>
+  </div> -->
+<script src="{{ site.baseurl }}/js/select-resize.js"></script>
