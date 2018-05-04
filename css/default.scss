@@ -23,7 +23,7 @@ body {
     font-size: 80%;
   }
   font-weight: lighter;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.13em;
   line-height: 1.7em;
   color: $textColor;
   background-color: $bodyBackgroundColor;
@@ -101,6 +101,10 @@ a {
   }
 }
 
+.normal-link {
+  color: $textColor;
+}
+
 em, i {
   font-style: italic;
 }
@@ -164,7 +168,10 @@ nav {
   right: 0;
 
   img {
-    width: 50px;
+    width: 3%;
+    @include mobile {
+      width: 30px;
+    }
   }
   @include mobile {
     display: block;
@@ -172,7 +179,7 @@ nav {
   }
 
   a {
-    margin-left: 20px;
+    // margin-left: 20px;
     color: $darkGray;
     text-align: right;
     font-weight: 300;
