@@ -148,7 +148,9 @@
 
       .post-cover-picture-container {
         position: relative;
-
+        .video-image {
+          cursor: zoom-in;
+        }
         .post-cover-picture {
           position: relative;
           top: -$index-width/1.7;

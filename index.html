@@ -26,7 +26,7 @@ layout: default
         I develop
         <select class="select-develop">
           <optgroup>
-            <option value="software">softwares</option>
+            <option value="software">software</option>
             <option value="video games">video games</option>
             <option value="mobile apps">mobile apps</option>
             <option value="websites">websites</option>
@@ -36,7 +36,7 @@ layout: default
                <option class="widthTempOption"></option>
         </select>
         </br>
-        I studied Interactive Design at Gobelins for
+        I studied Interactive Design at <a class="normal-link" href="https://www.gobelins.fr/formation/mdi-design-et-management-de-l-innovation-interactive-cycle-2-lead-technique-ou-lead" target="_blank">Gobelins</a> for
         <select class="select-gobelins">
           <optgroup>
             <option value="3">3</option>
@@ -100,10 +100,12 @@ layout: default
                {{ forloop.index }}/{{site.posts.size}}
             </div>
             <div class="post-cover-picture-container">
-              <img class="post-cover-picture" src="{{ site.baseurl }}{{ post.preview }}" alt="Cover image for {{post.title}}" style="box-shadow: 5px 5px rgba({{post.color.r}},{{post.color.g}},{{post.color.b}});">
+              {% if post.vimeo-id %}<a class="video-image" target="_blank" href="http://vimeo.com/{{post.vimeo-id}}">{%endif%}
+                <img class="post-cover-picture" src="{{ site.baseurl }}{{ post.preview }}" alt="Cover image for {{post.title}}" style="box-shadow: 5px 5px rgba({{post.color.r}},{{post.color.g}},{{post.color.b}});">
+              {% if post.vimeo-id %}</a>{%endif%}
               <div class="post-cover-icons-container">
-                {% if post.vimeo-id %} <span class="post-cover-icon"><a class="video-icon" target="_blank" href="http://vimeo.com/{{post.vimeo-id}}" vimeo-id="{{post.vimeo-id}}" ><img src="assets/images/video-logo.png" alt=""></a></span>{%endif%}
-                {% if post.link %} <span class="post-cover-icon"><a class="video-icon" target="_blank" href="{{post.link}}"><img src="assets/images/link-logo.png" alt=""></a></span>{%endif%}
+                {% if post.vimeo-id %} <span class="post-cover-icon"><a class="video-image" target="_blank" href="http://vimeo.com/{{post.vimeo-id}}" vimeo-id="{{post.vimeo-id}}" ><img src="assets/images/video-logo.png" alt=""></a></span>{%endif%}
+                {% if post.link %} <span class="post-cover-icon"><a class="" target="_blank" href="{{post.link}}"><img src="assets/images/link-logo.png" alt=""></a></span>{%endif%}
               </div>
             </div>
             <div class="date outline-text" style="background-color: rgb({{post.color.r}},{{post.color.g}},{{post.color.b}});">
@@ -112,10 +114,11 @@ layout: default
           </div>
 
           <div class="post-description half-parent-size">
-
-            <h2 class="title outline-text" style="background-color: rgb({{post.color.r}},{{post.color.g}},{{post.color.b}});">
-              {{ post.title }}
-            </h2>
+            {% if post.link %}<a href="{{post.link}}" target="_blank">{% endif %}
+              <h2 class="title outline-text" style="background-color: rgb({{post.color.r}},{{post.color.g}},{{post.color.b}});">
+                {{ post.title }}
+              </h2>
+            {% if post.link %}</a>{% endif %}
 
             <div class="entry">
               {{ post.description }}
