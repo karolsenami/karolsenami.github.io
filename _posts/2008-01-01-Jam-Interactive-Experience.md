@@ -15,8 +15,8 @@ preview: /assets/images/articles/jamie/cover.jpg
 link: https://vimeo.com/277150723
 type: project
 color:
-  r: 115
-  g: 115
-  b: 115
+  r: 10
+  g: 10
+  b: 10
 description: Jam Interactive Experience (jam•ie) is an installation which gives anyone the opportunity to make harmonic music. For neophytes to musicians, everyone can experiment in this jam with intuitive and innovative instruments. The installation has been and will continue to be exposed in Paris.
 ---
