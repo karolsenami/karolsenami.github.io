@@ -6,7 +6,7 @@
   $description-width: 67%;
   $picture-width: 33%;
   display: flex;
-  margin-bottom:$bottom-margin;
+  // margin-bottom:$bottom-margin;
   position: relative;
 
   @include mobile {
@@ -17,8 +17,14 @@
   // left
   .profile-picture {
     margin: auto;
-    display: flex;
+    display: block;
     width: $picture-width;
+
+    img {
+      max-width: 75%;
+      margin-left: 12%;
+    }
+
     @include mobile {
       width: 100%;
       margin-bottom: 5%;
@@ -96,6 +102,7 @@
     margin-bottom:1em;
     background: $primaryColor;
     display: inline-block;
+    text-align: left;
     padding: 0 0.2em;
   }
 
