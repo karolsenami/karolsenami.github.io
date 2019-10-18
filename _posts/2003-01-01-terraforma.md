@@ -2,7 +2,7 @@
 layout: post
 title: Terraforma
 subtitle: Gobelins
-year: 2015
+year: web 3D
 preview: /assets/images/articles/terraforma/cover.jpg
 link: http://terraforma.xyz/
 vimeo-id: 173777471

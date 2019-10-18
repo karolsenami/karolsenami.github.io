@@ -2,7 +2,7 @@
 layout: post
 title: jam•ie
 subtitle: Gobelins
-year: 2018
+year: installation
 vimeo-id: 277150723
 credits:
   - name: Marc-Antoine Guilbault

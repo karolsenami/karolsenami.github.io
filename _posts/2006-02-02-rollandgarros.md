@@ -2,7 +2,7 @@
 layout: post
 title: Rolland Garros Visite Virtuelle
 subtitle: FFT
-year: 2019
+year: app (Unity)
 preview: /assets/images/articles/rollandgarros.gif
 type: project
 video: https://youtu.be/8h_seiqmV0w

@@ -2,7 +2,7 @@
 layout: post
 title: Labs' portfolio
 subtitle: Digitas Labs
-year: 2017
+year: web
 preview: /assets/images/articles/digitaslabsparis/cover.jpg
 link: http://digitaslabsparis.com
 type: project
