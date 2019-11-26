@@ -18,5 +18,5 @@ color:
   r: 42
   g: 161
   b: 152
-description: Jam Interactive Experience (jam•ie) is an installation which gives anyone the opportunity to make harmonic music. For neophytes to musicians, everyone can experiment in this jam with intuitive and innovative instruments. The installation has been and will continue to be exposed in Paris.
+description: Jam Interactive Experience (jam•ie) is an installation which gives anyone the opportunity to make harmonic music. For neophytes to musicians, everyone can experiment in this jam with intuitive and innovative instruments. The installation has been exposed 5 times in Paris.
 ---
