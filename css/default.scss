@@ -40,9 +40,9 @@ main {
 
 .container {
   background: $backgroundColor;
-  margin: 1%;
+  margin: 0.5%;
   padding: $profile-horizontal-margin;
-  width: 98%;
+  width: 99%;
   @include mobile {
     margin: 3%;
     width: 94%;
@@ -67,9 +67,12 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3.75em;
+  @include mobile {
+    font-size: 2.75em;
+  }
   font-style: italic;
-  text-shadow: 1px 1px 0 $textColor , -1px -1px 0 $textColor , 1px -1px 0 $textColor , -1px 1px 0 $textColor ;
-  color: $backgroundColor;
+  text-shadow: 1px 1px 0 $backgroundColor, -1px -1px 0 $backgroundColor, 1px -1px 0 $backgroundColor, -1px 1px 0 $backgroundColor;
+  color: $textColor;
   text-overflow: clip;
   a {
     color: inherit;
@@ -91,13 +94,13 @@ h4 {
 }
 
 a {
-  color: $blue;
-  // text-shadow: 2px 2px $primaryColor;
+  color: $primaryColor;
+  // text-shadow: .5px .6px $textColor;
 
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: $primaryColor;
   }
 }
 
@@ -118,13 +121,13 @@ img {
 }
 
 .outline-text {
-  text-shadow: 1px 1px 0 $textColor , -1px -1px 0 $textColor , 1px -1px 0 $textColor , -1px 1px 0 $textColor ;
-  color: $backgroundColor;
+  text-shadow: 1px 1px 0 $backgroundColor , -1px -1px 0 $backgroundColor , 1px -1px 0 $backgroundColor , -1px 1px 0 $backgroundColor ;
+  color: $textColor;
   text-overflow: clip;
 }
 
 .outline-box {
-  box-shadow: 1px 1px 0 $textColor , -1px -1px 0 $textColor , 1px -1px 0 $textColor , -1px 1px 0 $textColor ;
+  box-shadow: 1px 1px 0 $backgroundColor , -1px -1px 0 $backgroundColor , 1px -1px 0 $backgroundColor , -1px 1px 0 $backgroundColor ;
 }
 
 // Fixes images in popup boxes from Google Translate
@@ -157,7 +160,7 @@ img {
 header {
   margin-bottom: 3%;
   .site-name {
-    text-shadow: 1px 1px 0 $textColor , -1px -1px 0 $textColor , 1px -1px 0 $textColor , -1px 1px 0 $textColor,-6px -3px 1px $primaryColor;
+    text-shadow: 1px 1px 0 $backgroundColor , -1px -1px 0 $backgroundColor , 1px -1px 0 $backgroundColor , -1px 1px 0 $backgroundColor,-6px -3px 1px $primaryColor;
   }
 }
 
@@ -180,13 +183,13 @@ nav {
 
   a {
     // margin-left: 20px;
-    color: $darkGray;
+    color: $primaryColor;
     text-align: right;
     font-weight: 300;
 
     @include mobile {
-      margin: 0 10px;
-      color: $blue;
+      // margin: 0 10px;
+      color: $primaryColor;
     }
   }
 }
