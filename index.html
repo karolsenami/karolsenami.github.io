@@ -134,7 +134,7 @@ layout: default
             <div class="post-cover-picture-container">
               {% if post.video %}<a class="video-image" target="_blank" href="{{post.video}}">
               {% elsif post.vimeo-id %}<a class="video-image" target="_blank" href="http://vimeo.com/{{post.vimeo-id}}">{%endif%}
-                <img class="post-cover-picture" src="{{ site.baseurl }}{{ post.preview }}" alt="Cover image for {{post.title}}" style="box-shadow: 5px 5px rgb({{post.color.r}},{{post.color.g}},{{post.color.b}}); border: 1px solid rgb({{post.color.r}},{{post.color.g}},{{post.color.b}});">
+                <img class="post-cover-picture" src="{{ site.baseurl }}{{ post.preview }}" alt="Cover image for {{post.title}}" style="box-shadow: 5px 5px rgb({{post.color.r}},{{post.color.g}},{{post.color.b}}); border: 3px solid rgb({{post.color.r}},{{post.color.g}},{{post.color.b}});">
               {% if post.video or post.vimeo-id %}</a>{%endif%}
               <div class="post-cover-icons-container">
                 {% if post.video %} <span class="post-cover-icon"><a class="video-image" target="_blank" href="{{post.video}}"><img src="assets/images/video-logo.png" alt=""></a></span>
