@@ -1,0 +1,684 @@
+
+//
+// IMPORTS
+//
+// @import url("//hello.myfonts.net/count/3b2397");
+
+/***************/
+/* MEYER RESET */
+/***************/
+@mixin mobile {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+// HTML5 display-role reset for older browsers
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+// Apply a natural box layout model to all elements
+// from: http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+b {
+ font-weight: 700;
+}
+
+$beige: #E9D3B6;
+$white: rgba(244,238,227,0.5);
+$corail: #E35550;
+$bordeaux: #351827;
+$clearBordeaux: #503543;//#351827;
+$clearBeige: #F4EEE3;
+
+$ctaImageMargin: 10px;
+$verticalPadding: 110px;
+$mobileVerticalPadding: 30px;
+$mobileHorizontalPadding: 20px;
+
+
+@font-face {font-family: 'Amithen';src: url('../assets/fonts/webfonts/3B2397_0_0.eot');src: url('../assets/fonts/webfonts/3B2397_0_0.eot?#iefix') format('embedded-opentype'),url('../assets/fonts/webfonts/3B2397_0_0.woff2') format('woff2'),url('../assets/fonts/webfonts/3B2397_0_0.woff') format('woff'),url('../assets/fonts/webfonts/3B2397_0_0.ttf') format('truetype');}
+
+// @font-face {
+//     font-family: Amithen;
+//     src: url("../assets/fonts/Amithen.otf") format("opentype");
+// }
+
+
+/**************/
+/* BASE RULES */
+/**************/
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font: 1.5em "DM Sans", Helvetica, sans-serif;
+  @include mobile {
+      font: 1.2em "DM Sans", Helvetica, sans-serif;
+  }
+  .bigger {
+    font-size: 1.7em;
+  }
+  line-height: 1em;
+
+  background-color: $clearBeige;
+  color: $clearBordeaux;
+}
+
+#container {
+  overflow-x: hidden;
+}
+
+.normal {
+  font-size: 0.8em;
+  line-height: 138%;
+}
+.small {
+  font-size: 0.6em;
+}
+
+h1, h2 {
+  font: 1.3em "Bowlby One", Impact, sans-serif;
+
+  color: $corail;
+}
+h1 {
+  font-size: 3.3em;
+  @include mobile {
+    font-size: 2.3em;
+  }
+}
+h3 {
+  font: 2em "Amithen", Georgia, serif	;
+  color: $clearBordeaux;
+  @include mobile {
+    font-size: 2em;
+  }
+}
+iframe {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 30px;
+  @include mobile {
+    height: 249px;
+  }
+}
+
+.beige {
+  background-color: $beige;
+}
+.white {
+  background-color: $white;
+}
+
+
+.centered {
+  text-align: center;
+}
+.inversed {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.bold {
+  font-weight: bold;
+}
+.noscroll {
+  overflow: hidden;
+}
+
+.col1 {
+  padding: $verticalPadding 18%;
+  @include mobile {
+    padding: $mobileVerticalPadding $mobileHorizontalPadding;
+  }
+}
+.col2 {
+  padding: $verticalPadding 24%;
+  @include mobile {
+    padding: $mobileVerticalPadding $mobileHorizontalPadding;
+  }
+}
+.col3 {
+  padding: $verticalPadding 25%;
+  @include mobile {
+    padding: $mobileVerticalPadding $mobileHorizontalPadding;
+  }
+}
+.bottom-padding {
+  padding-bottom: 60px;
+  @include mobile {
+    padding-bottom: $mobileVerticalPadding;
+  }
+}
+
+.intro-container {
+  background-color: $clearBeige;
+  transition: background-color 0.5s ease-out;
+}
+.oxmo-signature {
+  width: 100%;
+  text-align: center;
+}
+.animated-signature {
+  position: absolute;
+  top:300px;
+}
+
+.home {
+    padding: 20% 0;
+    @include mobile {
+      padding: 30% 0;
+    }
+    /* padding-bottom: 20%; */
+}
+
+#paroles-cta {
+  position: fixed;
+  z-index:1000;
+  top: 30px;
+  right: 30px;
+  @include mobile {
+    top: 10px;
+    right: 10px;
+  }
+  img {
+    transition: width 0.2s ease;
+    &:hover { cursor: pointer; width: 150px;}
+
+    width: 120px;
+    @include mobile {
+      width: 90px;
+    }
+  }
+}
+
+#lmdf-intro {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cta {
+  display: inline-block;
+  background-color: $corail;
+  text-transform: uppercase;
+  color: $clearBeige;
+  cursor: pointer;
+  font: 0.8em "Bowlby One", Impact, sans-serif;
+
+  @include mobile {
+    font-size: 0.6em;
+  }
+  letter-spacing: 1px;
+  padding: 16px 30px;
+  // margin: 30px auto;
+  margin: auto;
+  margin-bottom: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #D8514C;
+  }
+
+  .arrow-img {
+    // transition: margin-right 1s ease;
+    // &:hover {
+    //   padding-right: -5px;
+    // }
+  }
+  img {
+    vertical-align: middle;
+    max-width: 26px;
+  }
+}
+#stream-link {
+  padding-bottom: 14px;
+  img {
+    max-width: 16px;
+  }
+}
+.arrow-img {
+  margin-left: $ctaImageMargin;
+}
+#stream-link-text {
+  margin-left: $ctaImageMargin;
+}
+#home-title {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quote {
+  display: inline-block;
+
+  .quote-container {
+    display: flex;
+    @include mobile {
+      display: block;
+    }
+    position: relative;
+  }
+  .quote-text {
+    position: relative;
+    left: 0;
+    width: 68%;
+    z-index: 10;
+    display: inline-block;
+    font-size: 3vw;//1.56em;
+    line-height: 146%;
+
+    @include mobile {
+      width: 100%;
+      font-size: 6.1vw;
+      padding-bottom: $mobileVerticalPadding/3;
+    }
+  }
+
+  .quote-image {
+    position: absolute;
+    right: 0;
+    z-index: 0;
+    display: inline-block;
+    @include mobile {
+      // float: left;
+      right:unset;
+      left:0;
+    }
+    img {
+      float: right;
+      width :27vw;//45%;
+      @include mobile {
+        // float: left;
+        width :61vw;
+      }
+    }
+  }
+
+  .quote-enter {
+    // background-color: red;
+    width: 100%;
+    height: 100%;
+    // text-align: left;
+    left: 0;
+    margin-bottom: 30px;
+    @include mobile {
+      margin-bottom: 15px;
+    }
+  }
+  .quote-leave {
+    width: 100%;
+    height: 100%;
+    // margin-left: 40%;
+    // float: right;
+    margin-top: 1%;
+    // margin-right: 53%;
+
+    img {
+      float: right;
+      margin-right: 44%;
+      @include mobile {
+        margin-right: unset;
+        margin-top: - $mobileVerticalPadding/3;
+      }
+    }
+  }
+  .quote-icon {
+    img {
+      width: 7vw;
+      @include mobile {
+        width: 12vw;
+      }
+    }
+  }
+
+  .quote-description {
+      margin-top: 140px;
+      width: 72%;
+      @include mobile {
+        width: 100%;
+        margin-top: 103vw;
+      }
+  }
+}
+
+.clip-real {
+  width: 90%;
+  display: flex;
+  margin: auto;
+  @include mobile {
+    display: inline-grid;
+  }
+
+  .real-img-container {
+    width: 200%;
+    @include mobile {
+      width: 70%;
+    }
+    float:left;
+    img {
+      text-align: center;
+      vertical-align: middle;
+      padding-right: 15%;
+      width: 80%;
+      padding-bottom: 10px;
+    }
+    text-align: left;
+    .real-realisepar {
+      font-size: 1.2vw;
+    }
+
+    .real-name {
+      font: 3vw "Amithen", Georgia, serif;
+      color: $corail;
+    }
+  }
+  .clip-text {
+    text-align: left;
+    // width: 50%;
+    margin: auto;
+  }
+  // overflow: hidden;
+}
+
+.clip-countdown {
+  font: 0.7em "Bowlby One", Impact, sans-serif;
+  letter-spacing: 1px;
+}
+
+.lmdf {
+  .lmdf-logo {
+    max-width: 130px;
+  }
+  .lmdf-title {
+    padding-bottom: 50px;
+  }
+}
+
+
+footer {
+  background-color: $bordeaux;
+  color: $clearBeige;
+  text-align: center;
+  padding: $verticalPadding;
+  @include mobile {
+    padding: $mobileVerticalPadding $mobileHorizontalPadding;
+  }
+
+  .remerciements {
+    padding-bottom: 90px;
+  }
+
+  a {
+    text-decoration: underline;
+    color: $clearBeige;
+  }
+
+  .footer-link {
+    margin: 2%;
+    vertical-align: middle;
+    img {
+      max-width: 100px;
+
+      @include mobile {
+        max-width: 80px;
+        margin: 10px;
+      }
+    }
+
+  }
+}
+// main {
+//   max-width: 1300px;
+//   margin: auto;
+// }
+.paroles-container {
+  display: none;
+  z-index: 1100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  // height: 100%;
+  padding-bottom: 400px;
+  background-color: $clearBeige;
+
+  @include mobile {
+    padding-bottom: 50px;
+  }
+
+  .back-icon-container {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    &:hover {cursor: pointer;}
+  }
+  .back-icon {
+    width: 40px;
+    // filter: invert(1);
+  }
+
+  .paroles-title {
+    margin-top: 120px;
+  }
+  .paroles-artist {
+    font-size: 1em;
+    @include mobile {
+      margin-bottom: $mobileVerticalPadding;
+    }
+  }
+
+  .paroles-select {
+    position: absolute; //fixed;
+    width: 200px;
+    top: 169px;
+    left: 12vw;
+    @include mobile {
+      width: 30vw;
+      position: unset;
+    }
+  }
+
+  .paroles-content {
+    margin-top: 170px;
+    font: 1em "Amithen", Georgia, serif;
+    color: $clearBordeaux;
+
+    @include mobile {
+      margin-top: 40px;
+      font-size: 1em;
+    }
+  }
+
+  .paroles-bloc {
+    margin: auto;
+    margin-bottom: 20px;
+    width: fit-content;
+    font-size: 1.3em;
+    line-height: 1.5em;
+
+    @include mobile {
+      margin-bottom: 0px;
+      font-size: 1em;
+    }
+
+    &:hover {
+        color: $corail;
+        // text-decoration: underline;
+        cursor: pointer;
+        cursor: url("../assets/images/share.png") 20 20, pointer;
+        // .paroles-share {
+        //   display: flex;
+        // }
+    }
+  }
+
+  .paroles-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    width: 100%; height: 100%;
+    color: $clearBeige;
+    z-index: 1200;
+    overflow-y: hidden;
+    @include mobile {
+      overflow-y:auto;
+    }
+
+    .quit-overlay {
+      position: absolute;
+      top: 76px;
+      right: 167px;
+      width: 30px;
+      @include mobile {
+        // width: 10%;
+        margin-top: 20px;
+        position: unset;
+      }
+
+      &:hover { cursor: pointer; }
+    }
+
+    .title {
+      font-size: 0.8em;
+      margin: auto;
+      margin-top: 76px;
+      margin-bottom: 30px;
+      width: 40%;
+      @include mobile {
+        margin-top: 30px;
+        width: 90%;
+      }
+
+    }
+    .subtitle {
+      font-size: 0.65em;
+      padding-bottom: 40px;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .overlay-background {
+      position: absolute;
+      float: left;
+      width: 100%; height: 100%;
+      left: 0; top: 0; bottom: 0; right: 0;
+      opacity: 0.96;
+      background-color: $bordeaux;
+      z-index: -1;
+
+      @include mobile {
+        height: 238%;
+      }
+
+    }
+
+    .canvas-container {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 40px;
+
+      img {
+        margin: 10px;
+      }
+    }
+    .overlay-share {
+      .share-text {
+        font-size: 0.65em;
+        padding-bottom: 20px;
+      }
+      .share-icon {
+        width: 27px;
+        margin: 0 5px;
+        cursor: pointer;
+      }
+    }
+
+    #canvas0, #canvas1, #canvas2 {
+      // transform: scale(0.25);
+    }
+
+    #canvas0-container { //1079x1080
+      width: 269.75px;
+      height: 270px;
+      // background-color: red;
+      @include mobile {
+        width: 90vw;
+        height: unset;
+      }
+    }
+    #canvas1-container { //1920x1080
+      width: 480px;
+      height: 270px;
+      // background-color: green;
+      @include mobile {
+        width: 90vw;
+        height: unset;
+      }
+    }
+
+    #canvas2-container { //749x1334
+      width:151.6px;// 187.25px;
+      height:270px;// 333.5px;
+      // background-color: blue;
+      @include mobile {
+        width: 90vw;
+        height: unset;
+      }
+    }
+
+    // opacity: 0.7;
+  }
+}
+
+
+
+
+// Settled on moving the import of syntax highlighting to the bottom of the CSS
+// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start

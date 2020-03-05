@@ -1,0 +1,26 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3875735, 2020-03-03T07:53:09-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Amithen by Dhan Studio
+ * URL: https://www.myfonts.com/fonts/dhanstudio/amithen/regular/
+ * Copyright: Copyright (c) 2017 by Dhan Studio. All rights reserved.
+ * 
+ * 
+ * 
+ * © 2020 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3b2397");
+
+  
+@font-face {font-family: 'Amithen';src:url('webfonts/3B2397_0_unhinted_0.woff2') format('woff2'),url('webfonts/3B2397_0_unhinted_0.woff') format('woff'),url('webfonts/3B2397_0_unhinted_0.ttf') format('truetype');}
+ 

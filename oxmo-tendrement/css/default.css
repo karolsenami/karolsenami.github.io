@@ -1,0 +1,510 @@
+/***************/
+/* MEYER RESET */
+/***************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+b {
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'Amithen';
+  src: url("../assets/fonts/webfonts/3B2397_0_0.eot");
+  src: url("../assets/fonts/webfonts/3B2397_0_0.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/webfonts/3B2397_0_0.woff2") format("woff2"), url("../assets/fonts/webfonts/3B2397_0_0.woff") format("woff"), url("../assets/fonts/webfonts/3B2397_0_0.ttf") format("truetype"); }
+/**************/
+/* BASE RULES */
+/**************/
+html {
+  font-size: 100%; }
+
+body {
+  font: 1.5em "DM Sans", Helvetica, sans-serif;
+  line-height: 1em;
+  background-color: #F4EEE3;
+  color: #503543; }
+  @media screen and (max-width: 640px) {
+    body {
+      font: 1.2em "DM Sans", Helvetica, sans-serif; } }
+  body .bigger {
+    font-size: 1.7em; }
+
+#container {
+  overflow-x: hidden; }
+
+.normal {
+  font-size: 0.8em;
+  line-height: 138%; }
+
+.small {
+  font-size: 0.6em; }
+
+h1, h2 {
+  font: 1.3em "Bowlby One", Impact, sans-serif;
+  color: #E35550; }
+
+h1 {
+  font-size: 3.3em; }
+  @media screen and (max-width: 640px) {
+    h1 {
+      font-size: 2.3em; } }
+
+h3 {
+  font: 2em "Amithen", Georgia, serif;
+  color: #503543; }
+  @media screen and (max-width: 640px) {
+    h3 {
+      font-size: 2em; } }
+
+iframe {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 30px; }
+  @media screen and (max-width: 640px) {
+    iframe {
+      height: 249px; } }
+
+.beige {
+  background-color: #E9D3B6; }
+
+.white {
+  background-color: rgba(244, 238, 227, 0.5); }
+
+.centered {
+  text-align: center; }
+
+.inversed {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1); }
+
+.bold {
+  font-weight: bold; }
+
+.noscroll {
+  overflow: hidden; }
+
+.col1 {
+  padding: 110px 18%; }
+  @media screen and (max-width: 640px) {
+    .col1 {
+      padding: 30px 20px; } }
+
+.col2 {
+  padding: 110px 24%; }
+  @media screen and (max-width: 640px) {
+    .col2 {
+      padding: 30px 20px; } }
+
+.col3 {
+  padding: 110px 25%; }
+  @media screen and (max-width: 640px) {
+    .col3 {
+      padding: 30px 20px; } }
+
+.bottom-padding {
+  padding-bottom: 60px; }
+  @media screen and (max-width: 640px) {
+    .bottom-padding {
+      padding-bottom: 30px; } }
+
+.intro-container {
+  background-color: #F4EEE3;
+  transition: background-color 0.5s ease-out; }
+
+.oxmo-signature {
+  width: 100%;
+  text-align: center; }
+
+.animated-signature {
+  position: absolute;
+  top: 300px; }
+
+.home {
+  padding: 20% 0;
+  /* padding-bottom: 20%; */ }
+  @media screen and (max-width: 640px) {
+    .home {
+      padding: 30% 0; } }
+
+#paroles-cta {
+  position: fixed;
+  z-index: 1000;
+  top: 30px;
+  right: 30px; }
+  @media screen and (max-width: 640px) {
+    #paroles-cta {
+      top: 10px;
+      right: 10px; } }
+  #paroles-cta img {
+    transition: width 0.2s ease;
+    width: 120px; }
+    #paroles-cta img:hover {
+      cursor: pointer;
+      width: 150px; }
+    @media screen and (max-width: 640px) {
+      #paroles-cta img {
+        width: 90px; } }
+
+#lmdf-intro {
+  color: inherit;
+  text-decoration: none; }
+
+.cta {
+  display: inline-block;
+  background-color: #E35550;
+  text-transform: uppercase;
+  color: #F4EEE3;
+  cursor: pointer;
+  font: 0.8em "Bowlby One", Impact, sans-serif;
+  letter-spacing: 1px;
+  padding: 16px 30px;
+  margin: auto;
+  margin-bottom: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease; }
+  @media screen and (max-width: 640px) {
+    .cta {
+      font-size: 0.6em; } }
+  .cta:hover {
+    background-color: #D8514C; }
+  .cta img {
+    vertical-align: middle;
+    max-width: 26px; }
+
+#stream-link {
+  padding-bottom: 14px; }
+  #stream-link img {
+    max-width: 16px; }
+
+.arrow-img {
+  margin-left: 10px; }
+
+#stream-link-text {
+  margin-left: 10px; }
+
+#home-title {
+  margin-left: auto;
+  margin-right: auto; }
+
+.quote {
+  display: inline-block; }
+  .quote .quote-container {
+    display: flex;
+    position: relative; }
+    @media screen and (max-width: 640px) {
+      .quote .quote-container {
+        display: block; } }
+  .quote .quote-text {
+    position: relative;
+    left: 0;
+    width: 68%;
+    z-index: 10;
+    display: inline-block;
+    font-size: 3vw;
+    line-height: 146%; }
+    @media screen and (max-width: 640px) {
+      .quote .quote-text {
+        width: 100%;
+        font-size: 6.1vw;
+        padding-bottom: 10px; } }
+  .quote .quote-image {
+    position: absolute;
+    right: 0;
+    z-index: 0;
+    display: inline-block; }
+    @media screen and (max-width: 640px) {
+      .quote .quote-image {
+        right: unset;
+        left: 0; } }
+    .quote .quote-image img {
+      float: right;
+      width: 27vw; }
+      @media screen and (max-width: 640px) {
+        .quote .quote-image img {
+          width: 61vw; } }
+  .quote .quote-enter {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    margin-bottom: 30px; }
+    @media screen and (max-width: 640px) {
+      .quote .quote-enter {
+        margin-bottom: 15px; } }
+  .quote .quote-leave {
+    width: 100%;
+    height: 100%;
+    margin-top: 1%; }
+    .quote .quote-leave img {
+      float: right;
+      margin-right: 44%; }
+      @media screen and (max-width: 640px) {
+        .quote .quote-leave img {
+          margin-right: unset;
+          margin-top: -10px; } }
+  .quote .quote-icon img {
+    width: 7vw; }
+    @media screen and (max-width: 640px) {
+      .quote .quote-icon img {
+        width: 12vw; } }
+  .quote .quote-description {
+    margin-top: 140px;
+    width: 72%; }
+    @media screen and (max-width: 640px) {
+      .quote .quote-description {
+        width: 100%;
+        margin-top: 103vw; } }
+
+.clip-real {
+  width: 90%;
+  display: flex;
+  margin: auto; }
+  @media screen and (max-width: 640px) {
+    .clip-real {
+      display: inline-grid; } }
+  .clip-real .real-img-container {
+    width: 200%;
+    float: left;
+    text-align: left; }
+    @media screen and (max-width: 640px) {
+      .clip-real .real-img-container {
+        width: 70%; } }
+    .clip-real .real-img-container img {
+      text-align: center;
+      vertical-align: middle;
+      padding-right: 15%;
+      width: 80%;
+      padding-bottom: 10px; }
+    .clip-real .real-img-container .real-realisepar {
+      font-size: 1.2vw; }
+    .clip-real .real-img-container .real-name {
+      font: 3vw "Amithen", Georgia, serif;
+      color: #E35550; }
+  .clip-real .clip-text {
+    text-align: left;
+    margin: auto; }
+
+.clip-countdown {
+  font: 0.7em "Bowlby One", Impact, sans-serif;
+  letter-spacing: 1px; }
+
+.lmdf .lmdf-logo {
+  max-width: 130px; }
+.lmdf .lmdf-title {
+  padding-bottom: 50px; }
+
+footer {
+  background-color: #351827;
+  color: #F4EEE3;
+  text-align: center;
+  padding: 110px; }
+  @media screen and (max-width: 640px) {
+    footer {
+      padding: 30px 20px; } }
+  footer .remerciements {
+    padding-bottom: 90px; }
+  footer a {
+    text-decoration: underline;
+    color: #F4EEE3; }
+  footer .footer-link {
+    margin: 2%;
+    vertical-align: middle; }
+    footer .footer-link img {
+      max-width: 100px; }
+      @media screen and (max-width: 640px) {
+        footer .footer-link img {
+          max-width: 80px;
+          margin: 10px; } }
+
+.paroles-container {
+  display: none;
+  z-index: 1100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 400px;
+  background-color: #F4EEE3; }
+  @media screen and (max-width: 640px) {
+    .paroles-container {
+      padding-bottom: 50px; } }
+  .paroles-container .back-icon-container {
+    position: fixed;
+    top: 30px;
+    left: 30px; }
+    .paroles-container .back-icon-container:hover {
+      cursor: pointer; }
+  .paroles-container .back-icon {
+    width: 40px; }
+  .paroles-container .paroles-title {
+    margin-top: 120px; }
+  .paroles-container .paroles-artist {
+    font-size: 1em; }
+    @media screen and (max-width: 640px) {
+      .paroles-container .paroles-artist {
+        margin-bottom: 30px; } }
+  .paroles-container .paroles-select {
+    position: absolute;
+    width: 200px;
+    top: 169px;
+    left: 12vw; }
+    @media screen and (max-width: 640px) {
+      .paroles-container .paroles-select {
+        width: 30vw;
+        position: unset; } }
+  .paroles-container .paroles-content {
+    margin-top: 170px;
+    font: 1em "Amithen", Georgia, serif;
+    color: #503543; }
+    @media screen and (max-width: 640px) {
+      .paroles-container .paroles-content {
+        margin-top: 40px;
+        font-size: 1em; } }
+  .paroles-container .paroles-bloc {
+    margin: auto;
+    margin-bottom: 20px;
+    width: fit-content;
+    font-size: 1.3em;
+    line-height: 1.5em; }
+    @media screen and (max-width: 640px) {
+      .paroles-container .paroles-bloc {
+        margin-bottom: 0px;
+        font-size: 1em; } }
+    .paroles-container .paroles-bloc:hover {
+      color: #E35550;
+      cursor: pointer;
+      cursor: url("../assets/images/share.png") 20 20, pointer; }
+  .paroles-container .paroles-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    color: #F4EEE3;
+    z-index: 1200;
+    overflow-y: hidden; }
+    @media screen and (max-width: 640px) {
+      .paroles-container .paroles-overlay {
+        overflow-y: auto; } }
+    .paroles-container .paroles-overlay .quit-overlay {
+      position: absolute;
+      top: 76px;
+      right: 167px;
+      width: 30px; }
+      @media screen and (max-width: 640px) {
+        .paroles-container .paroles-overlay .quit-overlay {
+          margin-top: 20px;
+          position: unset; } }
+      .paroles-container .paroles-overlay .quit-overlay:hover {
+        cursor: pointer; }
+    .paroles-container .paroles-overlay .title {
+      font-size: 0.8em;
+      margin: auto;
+      margin-top: 76px;
+      margin-bottom: 30px;
+      width: 40%; }
+      @media screen and (max-width: 640px) {
+        .paroles-container .paroles-overlay .title {
+          margin-top: 30px;
+          width: 90%; } }
+    .paroles-container .paroles-overlay .subtitle {
+      font-size: 0.65em;
+      padding-bottom: 40px; }
+    .paroles-container .paroles-overlay a {
+      color: inherit; }
+    .paroles-container .paroles-overlay .overlay-background {
+      position: absolute;
+      float: left;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0.96;
+      background-color: #351827;
+      z-index: -1; }
+      @media screen and (max-width: 640px) {
+        .paroles-container .paroles-overlay .overlay-background {
+          height: 238%; } }
+    .paroles-container .paroles-overlay .canvas-container {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 40px; }
+      .paroles-container .paroles-overlay .canvas-container img {
+        margin: 10px; }
+    .paroles-container .paroles-overlay .overlay-share .share-text {
+      font-size: 0.65em;
+      padding-bottom: 20px; }
+    .paroles-container .paroles-overlay .overlay-share .share-icon {
+      width: 27px;
+      margin: 0 5px;
+      cursor: pointer; }
+    .paroles-container .paroles-overlay #canvas0-container {
+      width: 269.75px;
+      height: 270px; }
+      @media screen and (max-width: 640px) {
+        .paroles-container .paroles-overlay #canvas0-container {
+          width: 90vw;
+          height: unset; } }
+    .paroles-container .paroles-overlay #canvas1-container {
+      width: 480px;
+      height: 270px; }
+      @media screen and (max-width: 640px) {
+        .paroles-container .paroles-overlay #canvas1-container {
+          width: 90vw;
+          height: unset; } }
+    .paroles-container .paroles-overlay #canvas2-container {
+      width: 151.6px;
+      height: 270px; }
+      @media screen and (max-width: 640px) {
+        .paroles-container .paroles-overlay #canvas2-container {
+          width: 90vw;
+          height: unset; } }
+
+/*# sourceMappingURL=default.css.map */
