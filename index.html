@@ -148,35 +148,31 @@ layout: default
           </div>
 
           <div class="post-description half-parent-size">
-            {% if post.link %}<a href="{{post.link}}" target="_blank">{% endif %}
+            {% if post.video %}<a href="{{post.video}}" target="_blank">{% endif %}
               <h2 class="title outline-text" style="background-color: rgb({{post.color.r}},{{post.color.g}},{{post.color.b}});">
                 {{ post.title }}
               </h2>
-            {% if post.link %}</a>{% endif %}
+              {% if post.video %}</a>{% endif %}
 
-            <div class="entry">
-              {{ post.description }}
-            </div>
+              <div class="entry">
+                {{ post.description }}
+              </div>
 
-            <div class="credits credit-{{forloop.index}}">
-              Credits :
-            {% for credit in post.credits %}
-              {% if credit.link %}<a href="{{credit.link}}" target="_blank"> {%endif%}
-              {{ credit.name }}<!--
-    -->{% if credit.link %}</a>{%endif%}{% if forloop.last == false %},{% endif %}
-            {% endfor %}
-            </div>
+              <div class="credits credit-{{forloop.index}}">
+                Credits :
+                {% for credit in post.credits %}
+                {% if credit.link %}<a href="{{credit.link}}" target="_blank"> {%endif%}
+                  {{ credit.name }}<!--
+                  -->{% if credit.link %}</a>{%endif%}{% if forloop.last == false %},{% endif %}
+                  {% endfor %}
+                </div>
 
-            <style>
+                <style>
               .credit-{{forloop.index}} a {
                  color: rgb({{post.color.r}},{{post.color.g}},{{post.color.b}});
               }
             </style>
-
           </div>
-
-
-
         </article>
       <!-- </a> -->
     {% endfor %}

@@ -74,6 +74,7 @@
   // right
   .profile-description {
     width: $description-width;
+    font-family: $font-title;
     font-size: 1.5em;
     line-height: 1.7em;
     margin-bottom: 5%;
@@ -129,6 +130,7 @@
       padding-right: $children-horizontal-padding;
       margin: auto;
       $index-width: 2.9em;
+      font-family: $font-title;
       @include mobile {
         width: 100%;
         padding-right: 0;
@@ -173,9 +175,8 @@
           bottom: 2.4em;
           left: 0.7em;
           @include mobile {
-            bottom:0;
-            top: -5%;
-            left: 77%;
+            bottom:20%;
+            left: 5%;
           }
           z-index: 9;
           display: flex;
@@ -185,7 +186,7 @@
             width: 7%;
             margin-right: 3%;
             img {
-
+              width: 400px;
             }
             // padding-right: 10%;
           }
@@ -217,6 +218,11 @@
     // right
     .post-description {
       // padding-left: $children-horizontal-padding;
+
+      .entry {
+
+      }
+
       width: 80%;
       @include mobile {
         width: 100%;
@@ -247,6 +253,7 @@
       .credits {
         margin-left: 5%;
         font-style: italic;
+        font-family: $font-title;
       }
     }
   }
