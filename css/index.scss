@@ -219,8 +219,10 @@
     .post-description {
       // padding-left: $children-horizontal-padding;
 
-      .entry {
-
+      a {
+        // text-shadow: 0.5px 0.5px 0 $textColor , -0.5px -0.5px 0 $textColor , 0.5px -0.5px 0 $textColor , -0.5px 0.5px 0 $textColor ;
+        // color: $textColor;
+        // text-overflow: clip;
       }
 
       width: 80%;
