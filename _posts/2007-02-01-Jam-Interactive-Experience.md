@@ -12,7 +12,6 @@ credits:
   - name: Pauline Viron
     link: https://fr.linkedin.com/in/pauline-viron-7a1ba0bb
 preview: /assets/images/articles/jamie/cover.jpg
-link: https://vimeo.com/277150723
 type: project
 color:
   r: 42
