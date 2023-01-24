@@ -11,7 +11,7 @@ color:
   r: 30
   g: 2
   b: 245
-description: Scan yourself and play with the interactive 3D environment.</br>Take a video of your avatar and send it by mail or to the cloud.</br></br>The workshop took place in Paris at 3537 in October 2022.
+description: Scan yourself and play with the interactive 3D environment.</br>Take a video of your avatar and send it by mail or to the cloud.</br></br>The workshop took place in Paris at 3537 in October 2022.</br>I developed it in Unity for touchscreen Windows PCs.
 credits:
   - name: Perimetre Studio
     link: https://www.perimetre.studio/
