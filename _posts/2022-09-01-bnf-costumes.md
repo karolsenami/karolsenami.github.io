@@ -3,7 +3,7 @@ layout: post
 title: BnF "Costumes"
 subtitle: Fleur de Papier
 year: Kinect app (Unity)
-preview: /assets/images/articles/MaximilienBNF.jpeg
+preview: /assets/images/articles/MaximilienBNF.jpg
 type: project
 video: https://youtu.be/UHF5aiPylK0
 color:
